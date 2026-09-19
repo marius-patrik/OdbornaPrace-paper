@@ -1,0 +1,37 @@
+{
+  "commit": "7962ecc002bd190a72a56f90cab443e80203c0bb",
+  "variants": [
+    {
+      "profile": "school",
+      "title": "Školní česká verze",
+      "subtitle": "Czech body, canonical English technical terms, bilingual annotation and keywords",
+      "final": "prace.pdf",
+      "review": "prace-review.pdf",
+      "recommended": true
+    },
+    {
+      "profile": "cs",
+      "title": "Čistě česká verze",
+      "subtitle": "Czech projection with Czech terminology where the bilingual helpers are used",
+      "final": "prace-cs.pdf",
+      "review": "prace-cs-review.pdf",
+      "recommended": false
+    },
+    {
+      "profile": "en",
+      "title": "English version",
+      "subtitle": "English projection; sections not yet authored bilingually remain in their source language",
+      "final": "prace-en.pdf",
+      "review": "prace-en-review.pdf",
+      "recommended": false
+    },
+    {
+      "profile": "merged",
+      "title": "Česky + English",
+      "subtitle": "Merged bilingual projection; bilingual source blocks render both language versions",
+      "final": "prace-bilingual.pdf",
+      "review": "prace-bilingual-review.pdf",
+      "recommended": false
+    }
+  ]
+}
