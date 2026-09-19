@@ -3,23 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Odborná práce - publikované verze</title>
+  <title>DarkFactory-Paper - publikované verze</title>
   <style>
     :root {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color-scheme: light dark;
     }
-    body {
-      margin: 0;
-      background: Canvas;
-      color: CanvasText;
-    }
-    main {
-      width: min(980px, calc(100% - 32px));
-      margin: 48px auto;
-    }
+    body { margin: 0; background: Canvas; color: CanvasText; }
+    main { width: min(1080px, calc(100% - 32px)); margin: 48px auto; }
     h1 { margin-bottom: 8px; }
-    .intro { max-width: 760px; opacity: .78; margin-bottom: 28px; }
+    .intro { max-width: 800px; opacity: .78; margin-bottom: 32px; line-height: 1.5; }
+    .template-section { margin-top: 34px; }
+    .template-section h2 { display: flex; align-items: center; gap: 10px; }
+    .template-default, .badge {
+      font-size: .72rem; padding: 3px 7px; border: 1px solid currentColor;
+      border-radius: 999px; opacity: .72; white-space: nowrap; font-weight: 500;
+    }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -27,99 +26,90 @@
     }
     .card {
       border: 1px solid color-mix(in srgb, CanvasText 18%, transparent);
-      border-radius: 12px;
-      padding: 18px;
+      border-radius: 12px; padding: 18px;
       background: color-mix(in srgb, Canvas 96%, CanvasText 4%);
     }
     .card-head {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: space-between;
+      display: flex; gap: 10px; align-items: center; justify-content: space-between;
     }
-    .card h2 { font-size: 1.08rem; margin: 0; }
+    .card h3 { font-size: 1.04rem; margin: 0; }
     .card p { line-height: 1.45; opacity: .78; min-height: 3.8em; }
-    .badge {
-      font-size: .72rem;
-      padding: 3px 7px;
-      border: 1px solid currentColor;
-      border-radius: 999px;
-      opacity: .72;
-      white-space: nowrap;
-    }
     .actions { display: flex; gap: 8px; flex-wrap: wrap; }
     a {
-      color: inherit;
-      text-decoration: none;
+      color: inherit; text-decoration: none;
       border: 1px solid color-mix(in srgb, CanvasText 30%, transparent);
-      border-radius: 8px;
-      padding: 8px 10px;
+      border-radius: 8px; padding: 8px 10px;
     }
     a.primary { font-weight: 650; }
-    footer { margin-top: 28px; opacity: .65; font-size: .9rem; }
+    footer { margin-top: 36px; opacity: .65; font-size: .9rem; }
   </style>
 </head>
 <body>
   <main>
     <h1>Odborná práce / Thesis</h1>
     <p class="intro">
-      Všechny varianty jsou generovány z jednoho Typst zdroje a otevírají se jako
-      přímé PDF soubory v nativním prohlížeči prohlížeče. Review varianty navíc
-      obsahují pracovní značky, callouty a diffy.
+      Všechny varianty vznikají z jednoho rukopisu. Výstup je určen kombinací
+      dokumentové šablony, publikačního profilu a final/review režimu. Odkazy míří
+      přímo na PDF a otevírají se v nativním PDF vieweru prohlížeče.
     </p>
-    <section class="grid">
-      
-        <article class="card">
-          <div class="card-head">
-            <h2>Školní česká verze</h2>
-            <span class="badge">recommended / doporučená</span>
-          </div>
-          <p>Czech body, canonical English technical terms, bilingual annotation and keywords</p>
-          <div class="actions">
-            <a class="primary" href="prace.pdf">Open final PDF</a>
-            <a href="prace-review.pdf">Open review PDF</a>
-          </div>
-        </article>
-        
-        <article class="card">
-          <div class="card-head">
-            <h2>Čistě česká verze</h2>
+    
+        <section class="template-section">
+          <h2>gjkt-odborna-prace <span class="template-default">default</span></h2>
+          <div class="grid">
+            
+            <article class="card">
+              <div class="card-head">
+                <h3>Školní česká verze</h3>
+                <span class="badge">recommended / doporučená</span>
+              </div>
+              <p>Czech body, canonical English technical terms, bilingual annotation and keywords</p>
+              <div class="actions">
+                <a class="primary" href="prace.pdf">Open final PDF</a>
+                <a href="prace-review.pdf">Open review PDF</a>
+              </div>
+            </article>
+            
+            <article class="card">
+              <div class="card-head">
+                <h3>Čistě česká verze</h3>
+                
+              </div>
+              <p>Czech projection with Czech terminology where bilingual helpers are used</p>
+              <div class="actions">
+                <a class="primary" href="prace-cs.pdf">Open final PDF</a>
+                <a href="prace-cs-review.pdf">Open review PDF</a>
+              </div>
+            </article>
+            
+            <article class="card">
+              <div class="card-head">
+                <h3>English version</h3>
+                
+              </div>
+              <p>English projection; source sections not yet bilingual remain in their source language</p>
+              <div class="actions">
+                <a class="primary" href="prace-en.pdf">Open final PDF</a>
+                <a href="prace-en-review.pdf">Open review PDF</a>
+              </div>
+            </article>
+            
+            <article class="card">
+              <div class="card-head">
+                <h3>Česky + English</h3>
+                
+              </div>
+              <p>Merged bilingual projection; bilingual source blocks render both language versions</p>
+              <div class="actions">
+                <a class="primary" href="prace-bilingual.pdf">Open final PDF</a>
+                <a href="prace-bilingual-review.pdf">Open review PDF</a>
+              </div>
+            </article>
             
           </div>
-          <p>Czech projection with Czech terminology where the bilingual helpers are used</p>
-          <div class="actions">
-            <a class="primary" href="prace-cs.pdf">Open final PDF</a>
-            <a href="prace-cs-review.pdf">Open review PDF</a>
-          </div>
-        </article>
+        </section>
         
-        <article class="card">
-          <div class="card-head">
-            <h2>English version</h2>
-            
-          </div>
-          <p>English projection; sections not yet authored bilingually remain in their source language</p>
-          <div class="actions">
-            <a class="primary" href="prace-en.pdf">Open final PDF</a>
-            <a href="prace-en-review.pdf">Open review PDF</a>
-          </div>
-        </article>
-        
-        <article class="card">
-          <div class="card-head">
-            <h2>Česky + English</h2>
-            
-          </div>
-          <p>Merged bilingual projection; bilingual source blocks render both language versions</p>
-          <div class="actions">
-            <a class="primary" href="prace-bilingual.pdf">Open final PDF</a>
-            <a href="prace-bilingual-review.pdf">Open review PDF</a>
-          </div>
-        </article>
-        
-    </section>
     <footer>
-      Build commit: c7c2175f91e5
+      Build commit: 952c8ec26e8b
     </footer>
   </main>
 </body>

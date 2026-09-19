@@ -1,5 +1,9 @@
 {
-  "commit": "c7c2175f91e5f77eb4b05e7df5ac1f06207b0f43",
+  "commit": "952c8ec26e8b1adbef8f186f84be955fef62de19",
+  "default_template": "gjkt-odborna-prace",
+  "templates": [
+    "gjkt-odborna-prace"
+  ],
   "variants": [
     {
       "profile": "school",
@@ -12,7 +16,7 @@
     {
       "profile": "cs",
       "title": "Čistě česká verze",
-      "subtitle": "Czech projection with Czech terminology where the bilingual helpers are used",
+      "subtitle": "Czech projection with Czech terminology where bilingual helpers are used",
       "final": "prace-cs.pdf",
       "review": "prace-cs-review.pdf",
       "recommended": false
@@ -20,7 +24,7 @@
     {
       "profile": "en",
       "title": "English version",
-      "subtitle": "English projection; sections not yet authored bilingually remain in their source language",
+      "subtitle": "English projection; source sections not yet bilingual remain in their source language",
       "final": "prace-en.pdf",
       "review": "prace-en-review.pdf",
       "recommended": false
